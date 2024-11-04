@@ -34,7 +34,7 @@ npm install
 node server.js
 ```
 
-######Open a new terminal window, and from the root project folder, navigate to the frontend directory. Install the frontend dependencies.
+###### Open a new terminal window, and from the root project folder, navigate to the frontend directory. Install the frontend dependencies.
 ```bash
 cd frontend
 npm install
