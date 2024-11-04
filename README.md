@@ -19,3 +19,22 @@ First, clone this repository to your local machine using Git.
 ```bash
 git clone https://github.com/Nithi2004/Secure-Chainaim
 cd Secure-Chainaim
+### Step 2: Install dependencies
+
+Once you’ve cloned the repository, install the dependencies for both the backend and frontend.
+
+#### Backend setup:
+
+Navigate to the backend directory and install the required packages.
+
+```bash
+cd backend
+npm install
+node server.js
+
+######Open a new terminal window, and from the root project folder, navigate to the frontend directory. Install the frontend dependencies.
+```bash
+cd frontend
+npm install
+npm start
+
