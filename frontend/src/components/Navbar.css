@@ -1,0 +1,46 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  background-color: white; /* White background */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px; /* Space between links */
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 50px; /* Pill-shaped border */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+}
+
+.nav-links li a:hover {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+}

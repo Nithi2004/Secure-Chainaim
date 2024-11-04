@@ -1,0 +1,104 @@
+.provider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.po-data-box,
+.redacted-data-box {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.po-data-box h2,
+.redacted-data-box h2 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.po-data-box p,
+.redacted-data-box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 8px 0;
+}
+
+.redact-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.redact-button:hover {
+  background-color: #555;
+}
+
+.redact-section {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 1.1rem; /* Adjust as needed */
+  color: #333;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 220px; /* Tooltip width */
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  top: -10px; /* Adjust to position above the tooltip icon */
+  left: 120%; /* Position to the right of the icon */
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip i {
+  font-size: 1rem;
+  color: #888; /* Icon color */
+}
+
+.redacted-data-box {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
