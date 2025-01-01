@@ -33,7 +33,9 @@
   margin: 8px 0;
 }
 
-.redact-button {
+.redact-button,
+.generate-proof-button {
+  /* Shared styles for both buttons */
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: bold;
@@ -46,7 +48,9 @@
   margin-top: 20px;
 }
 
-.redact-button:hover {
+.redact-button:hover,
+.generate-proof-button:hover {
+  /* Hover effect for both buttons */
   background-color: #555;
 }
 
@@ -54,6 +58,13 @@
   display: flex;
   align-items: center;
   margin-top: 10px;
+}
+
+.generate-proof-section {
+  margin-top: 20px; /* Add spacing above the Generate Proof button */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tooltip {

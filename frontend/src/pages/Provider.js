@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CryptoJS from "crypto-js";
 import axios from "axios";
 import "./Provider.css";
 
 const Provider = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const selectedProvider = location.state?.provider;
 
   const [encryptedPoData, setEncryptedPoData] = useState(null);
@@ -79,6 +80,10 @@ const Provider = () => {
     setIsRedacted(true);
   };
 
+  const handleGenerateProof = () => {
+    navigate("/generate-proof", { state: { provider: selectedProvider } });
+  };
+
   return (
     <div className="provider-container">
       <h1>{selectedProvider || "Provider Page"}</h1>
@@ -102,13 +107,23 @@ const Provider = () => {
       </div>
 
       {isRedacted && decryptedData && (
-        <div className="redacted-data-box">
-          <h2>Redacted Purchase Order Details</h2>
-          {Object.keys(decryptedData).map((key) => (
-            <p key={key}>
-              <strong>{key}:</strong> {decryptedData[key]}
-            </p>
-          ))}
+        <div>
+          <div className="redacted-data-box">
+            <h2>Redacted Purchase Order Details</h2>
+            {Object.keys(decryptedData).map((key) => (
+              <p key={key}>
+                <strong>{key}:</strong> {decryptedData[key]}
+              </p>
+            ))}
+          </div>
+          <div className="generate-proof-section">
+            <button
+              className="redact-button" // Using the same class as Redact
+              onClick={handleGenerateProof}
+            >
+              Generate Proof
+            </button>
+          </div>
         </div>
       )}
     </div>
